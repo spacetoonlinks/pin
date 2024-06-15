@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        .password-panel span.pw {
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 2px;
+    color: #fff;
+}
+
+        .password-panel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+            
+
+            min-height: 1em;
+    padding: 1em .5em;
+    margin: .9em 2em;
+    text-align: center;
+    border-radius: 15px;
+    border-width: 0;
+    background: #202020;
+    background: -moz-linear-gradient(70deg, #202020 30%, #404040 70%);
+    background: -webkit-linear-gradient(70deg, #202020 30%, #404040 70%);
+    background: -o-linear-gradient(70deg, #202020 30%, #404040 70%);
+    background: -ms-linear-gradient(70deg, #202020 30%, #404040 70%);
+    background: linear-gradient(160deg, #202020 30%, #404040 70%);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+        }
+
+
+
+
+        .pw {
+            display: inline-block;
+            width: 100%;
+        }
+        @media (max-width: 576px) {
+            .password-panel {
+                height: 80px;
+                font-size: 18px;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+
+
+        .btn-primary {
+    background-image: -webkit-linear-gradient(top, #337ab7 0, #265a88 100%);
+    background-image: -o-linear-gradient(top, #337ab7 0, #265a88 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88));
+    background-image: linear-gradient(to bottom, #337ab7 0, #265a88 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff265a88', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+    background-repeat: repeat-x;
+    border-color: #245580;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-body {
+    background-color: #c2ffc4;
+    border-radius: 15px 15px 0 0;
+    padding-bottom: 20px;
+    -webkit-box-shadow: 4px 4px 4px rgba(50,50,50,.4);
+    -moz-box-shadow: 4px 4px 4px rgba(50,50,50,.4);
+    box-shadow: 4px 4px 4px rgba(50,50,50,.4)
+}
+
+
+
+
+
+
+    </style>
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  />
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body style="background-color: #212121;">
+   <div class="container container-body" dir="rtl">
+    <h2 class="text-center"> 
+الكود المرور (PIN)</h2>
+    <div id="passwordPlace" class="well password-panel"><span class="pw">...</span></div>
+    <div>
+        <button class="btn btn-primary password-get" id="passwordGet" data-loading-text="جاري التوليد..." data-urlpassword="/api/v1/pin/json" data-urlcombinations="/api/v1/pin/combinations">
+الحصول على الكود المرور  (PIN)
+
+        </button>
+        <p id="passwordError" style="display:none;">
+            <i class="icon-sadface"></i> 
+            <span class="message"></span> <br>
+            <span> يرجى المحاولة لاحقًا أو <a href="/contact">الاتصال بالمؤلف</a>.</span>
+        </p>
+    </div>
+    <br>
+    <!--//-->
+   <div id="combinationsPlace" style="text-align: right; font-family: Monaco, Menlo, Consolas, 'Courier New', monospace; font-size: 20px; font-weight: bold;" class="panel combinations-panel panel-warning">
+    <div class="panel-heading">
+        <h3>معلومات عن الكود المرور (PIN)</h3>
+    </div>
+    <div class="panel-body">
+        <div class="rating">
+            <h4>فتح أنمياتك المفضلة مع رمز كود لـ سبيستون لينكس</h4>
+            <p>
+                اكتشف طريقة سهلة لمشاهدة أنمياتك المفضلة على موقع سبيستون لينكس باستخدام رمز الكود الخاص بنا. للحصول على هذا الرمز، اضغط على الإعلانات وانتظر قليلاً حتى يظهر الرمز لك.
+            </p>
+            <h4>كيفية الحصول على رمز الكود:</h4>
+            <p>
+                زر موقع سبيستون لينكس.<br>
+                تخطي الإعلانات في جوجل وانتظر حتى يظهر لك الرمز.<br>
+                استمتع بمشاهدة أنمياتك المفضلة مجاناً!
+            </p>
+            <div>
+                <p>
+                    <span class="label label-danger">ملاحظة مهمة:</span><br>
+                    يكون كل رمز كود صالحاً لمدة 24 ساعة فقط.<br>
+                    للحصول على رمز كود جديد، قم بزيارة الموقع كل يوم وحاول مجدداً.<br>
+                    باستخدام هذا الرمز، يمكنك مشاهدة الأنميات دون مشاكل وبدون دفع أي رسوم. استمتع بمشاهدة الحلقات والمغامرات الشيقة على سبيستون لينكس!
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <!--//-->
+
+        </div>
+        
+
+
+
+
+    </div>
+
+    <script>
+       function _0x1eba(_0x40bc75,_0x3f923e){const _0x3c243d=_0x3c24();return _0x1eba=function(_0x1eba4a,_0x3472fc){_0x1eba4a=_0x1eba4a-0x183;let _0x4ce2aa=_0x3c243d[_0x1eba4a];return _0x4ce2aa;},_0x1eba(_0x40bc75,_0x3f923e);}const _0x306130=_0x1eba;function _0x3c24(){const _0x56174c=['699tbvWYM','https://raw.githubusercontent.com/spacetoonlinks/hosting/main/SPACETOON-PIN.json','style','An\x20error\x20occurred\x20while\x20generating\x20the\x20pin.','118KUGtVC','411197FjbVLN','querySelector','pins','block','22504RmRTTJ','addEventListener','72kQdjzK','#passwordError\x20.message','894BoDikW','catch','random','980PehqfE','innerText','جاري\x20التوليد...','passwordError','1829036TIwrEL','497NRnshO','length','error','display','then','70326iiayiH','4048286Wobxdf','getElementById','disabled','3615Bzkirp','passwordGet','Error\x20fetching\x20the\x20pin:'];_0x3c24=function(){return _0x56174c;};return _0x3c24();}(function(_0x101393,_0x417bd2){const _0x1f2437=_0x1eba,_0xde54e4=_0x101393();while(!![]){try{const _0x54e939=-parseInt(_0x1f2437(0x1a2))/0x1+parseInt(_0x1f2437(0x1a1))/0x2*(-parseInt(_0x1f2437(0x19d))/0x3)+-parseInt(_0x1f2437(0x190))/0x4+-parseInt(_0x1f2437(0x19a))/0x5*(-parseInt(_0x1f2437(0x189))/0x6)+parseInt(_0x1f2437(0x191))/0x7*(-parseInt(_0x1f2437(0x185))/0x8)+parseInt(_0x1f2437(0x196))/0x9*(-parseInt(_0x1f2437(0x18c))/0xa)+-parseInt(_0x1f2437(0x197))/0xb*(-parseInt(_0x1f2437(0x187))/0xc);if(_0x54e939===_0x417bd2)break;else _0xde54e4['push'](_0xde54e4['shift']());}catch(_0x1a32ea){_0xde54e4['push'](_0xde54e4['shift']());}}}(_0x3c24,0x724d9),document[_0x306130(0x198)](_0x306130(0x19b))[_0x306130(0x186)]('click',function(){const _0x53cb03=_0x306130,_0x2b2d2a=this,_0x35e6aa=_0x53cb03(0x19e),_0x558ca9=document[_0x53cb03(0x1a3)]('.pw'),_0x32d13a=_0x558ca9[_0x53cb03(0x18d)];_0x558ca9[_0x53cb03(0x18d)]=_0x53cb03(0x18e),_0x2b2d2a[_0x53cb03(0x199)]=!![],setTimeout(()=>{const _0x10d281=_0x53cb03;fetch(_0x35e6aa)[_0x10d281(0x195)](_0x1920f8=>_0x1920f8['json']())[_0x10d281(0x195)](_0x235d5a=>{const _0x1c2185=_0x10d281,_0x1c8a44=_0x235d5a[_0x1c2185(0x183)],_0x3e0e18=_0x1c8a44[Math['floor'](Math[_0x1c2185(0x18b)]()*_0x1c8a44[_0x1c2185(0x192)])];_0x558ca9[_0x1c2185(0x18d)]=_0x3e0e18,_0x2b2d2a[_0x1c2185(0x199)]=![];})[_0x10d281(0x18a)](_0x1c94e0=>{const _0x49f4ed=_0x10d281;document[_0x49f4ed(0x198)](_0x49f4ed(0x18f))[_0x49f4ed(0x19f)][_0x49f4ed(0x194)]=_0x49f4ed(0x184),document[_0x49f4ed(0x1a3)](_0x49f4ed(0x188))['innerText']=_0x49f4ed(0x1a0),_0x558ca9[_0x49f4ed(0x18d)]=_0x32d13a,_0x2b2d2a[_0x49f4ed(0x199)]=![],console[_0x49f4ed(0x193)](_0x49f4ed(0x19c),_0x1c94e0);});},0x1388);}));
+    </script>
+</body>
+</html>
