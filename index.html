@@ -31,24 +31,21 @@
             
 
             min-height: 1em;
-    padding: 1em .5em;
-    margin: .9em 2em;
-    text-align: center;
-    border-radius: 15px;
-    border-width: 0;
-    background: #202020;
-    background: -moz-linear-gradient(70deg, #202020 30%, #404040 70%);
-    background: -webkit-linear-gradient(70deg, #202020 30%, #404040 70%);
-    background: -o-linear-gradient(70deg, #202020 30%, #404040 70%);
-    background: -ms-linear-gradient(70deg, #202020 30%, #404040 70%);
-    background: linear-gradient(160deg, #202020 30%, #404040 70%);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-        }
-
-
-
+            padding: 1em .5em;
+            margin: .9em 2em;
+            text-align: center;
+            border-radius: 15px;
+            border-width: 0;
+            background: #202020;
+            background: -moz-linear-gradient(70deg, #202020 30%, #404040 70%);
+            background: -webkit-linear-gradient(70deg, #202020 30%, #404040 70%);
+            background: -o-linear-gradient(70deg, #202020 30%, #404040 70%);
+            background: -ms-linear-gradient(70deg, #202020 30%, #404040 70%);
+            background: linear-gradient(160deg, #202020 30%, #404040 70%);
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+               }
 
         .pw {
             display: inline-block;
@@ -107,28 +104,8 @@
     box-shadow: 4px 4px 4px rgba(50,50,50,.4)
 }
 
-
-
-
-
-
     </style>
-
-
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"  />
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body style="background-color: #212121;">
    <div class="container container-body" dir="rtl">
@@ -137,7 +114,7 @@
     <div id="passwordPlace" class="well password-panel"><span class="pw">...</span></div>
     <div>
         <button class="btn btn-primary password-get" id="passwordGet" data-loading-text="جاري التوليد..." data-urlpassword="/api/v1/pin/json" data-urlcombinations="/api/v1/pin/combinations">
-الحصول على الكود المرور  (PIN)
+الحصول على الكود المرور  (PIN)
 
         </button>
         <p id="passwordError" style="display:none;">
@@ -180,15 +157,19 @@
     <!--//-->
 
         </div>
-        
-
-
-
-
+    
     </div>
 
+        <script>
+        const allowedReferrers = [
+            'https://buynome.blogspot.com/',
+            'https://anotherallowedurl.com/',
+            'https://yetanotherallowedurl.com/'
+        ];
+    </script>
+
     <script>
-       function _0x1eba(_0x40bc75,_0x3f923e){const _0x3c243d=_0x3c24();return _0x1eba=function(_0x1eba4a,_0x3472fc){_0x1eba4a=_0x1eba4a-0x183;let _0x4ce2aa=_0x3c243d[_0x1eba4a];return _0x4ce2aa;},_0x1eba(_0x40bc75,_0x3f923e);}const _0x306130=_0x1eba;function _0x3c24(){const _0x56174c=['699tbvWYM','https://raw.githubusercontent.com/spacetoonlinks/hosting/main/SPACETOON-PIN.json','style','An\x20error\x20occurred\x20while\x20generating\x20the\x20pin.','118KUGtVC','411197FjbVLN','querySelector','pins','block','22504RmRTTJ','addEventListener','72kQdjzK','#passwordError\x20.message','894BoDikW','catch','random','980PehqfE','innerText','جاري\x20التوليد...','passwordError','1829036TIwrEL','497NRnshO','length','error','display','then','70326iiayiH','4048286Wobxdf','getElementById','disabled','3615Bzkirp','passwordGet','Error\x20fetching\x20the\x20pin:'];_0x3c24=function(){return _0x56174c;};return _0x3c24();}(function(_0x101393,_0x417bd2){const _0x1f2437=_0x1eba,_0xde54e4=_0x101393();while(!![]){try{const _0x54e939=-parseInt(_0x1f2437(0x1a2))/0x1+parseInt(_0x1f2437(0x1a1))/0x2*(-parseInt(_0x1f2437(0x19d))/0x3)+-parseInt(_0x1f2437(0x190))/0x4+-parseInt(_0x1f2437(0x19a))/0x5*(-parseInt(_0x1f2437(0x189))/0x6)+parseInt(_0x1f2437(0x191))/0x7*(-parseInt(_0x1f2437(0x185))/0x8)+parseInt(_0x1f2437(0x196))/0x9*(-parseInt(_0x1f2437(0x18c))/0xa)+-parseInt(_0x1f2437(0x197))/0xb*(-parseInt(_0x1f2437(0x187))/0xc);if(_0x54e939===_0x417bd2)break;else _0xde54e4['push'](_0xde54e4['shift']());}catch(_0x1a32ea){_0xde54e4['push'](_0xde54e4['shift']());}}}(_0x3c24,0x724d9),document[_0x306130(0x198)](_0x306130(0x19b))[_0x306130(0x186)]('click',function(){const _0x53cb03=_0x306130,_0x2b2d2a=this,_0x35e6aa=_0x53cb03(0x19e),_0x558ca9=document[_0x53cb03(0x1a3)]('.pw'),_0x32d13a=_0x558ca9[_0x53cb03(0x18d)];_0x558ca9[_0x53cb03(0x18d)]=_0x53cb03(0x18e),_0x2b2d2a[_0x53cb03(0x199)]=!![],setTimeout(()=>{const _0x10d281=_0x53cb03;fetch(_0x35e6aa)[_0x10d281(0x195)](_0x1920f8=>_0x1920f8['json']())[_0x10d281(0x195)](_0x235d5a=>{const _0x1c2185=_0x10d281,_0x1c8a44=_0x235d5a[_0x1c2185(0x183)],_0x3e0e18=_0x1c8a44[Math['floor'](Math[_0x1c2185(0x18b)]()*_0x1c8a44[_0x1c2185(0x192)])];_0x558ca9[_0x1c2185(0x18d)]=_0x3e0e18,_0x2b2d2a[_0x1c2185(0x199)]=![];})[_0x10d281(0x18a)](_0x1c94e0=>{const _0x49f4ed=_0x10d281;document[_0x49f4ed(0x198)](_0x49f4ed(0x18f))[_0x49f4ed(0x19f)][_0x49f4ed(0x194)]=_0x49f4ed(0x184),document[_0x49f4ed(0x1a3)](_0x49f4ed(0x188))['innerText']=_0x49f4ed(0x1a0),_0x558ca9[_0x49f4ed(0x18d)]=_0x32d13a,_0x2b2d2a[_0x49f4ed(0x199)]=![],console[_0x49f4ed(0x193)](_0x49f4ed(0x19c),_0x1c94e0);});},0x1388);}));
+        const _0x131056=_0x5ee3;function _0x11fe(){const _0x878bcb=['passwordError','getElementById','253182tWoWOI','error','99BNOLwJ','1150555UQHxSs','pins','floor','addEventListener','click','20RcbInt','random','يجب\x20تخطي\x20الإعلانات\x20في\x20جوجل\x20أدسنس\u00a0للحصول\x20على\x20رمز\x20الكود.','#passwordError\x20.message','حدث\x20خطأ\x20أثناء\x20توليد\x20الكود.','****','disabled','referrer','1182188UDQBXA','10288oiCynT','جاري\x20التوليد...','catch','118380QrHnlo','1207551LcDzjR','then','.pw','35496wOrfZW','innerText','length','block','querySelector','json','style'];_0x11fe=function(){return _0x878bcb;};return _0x11fe();}function _0x5ee3(_0x185172,_0x3cd0e7){const _0x11feb8=_0x11fe();return _0x5ee3=function(_0x5ee37b,_0x4319f0){_0x5ee37b=_0x5ee37b-0x15a;let _0x3e6fc9=_0x11feb8[_0x5ee37b];return _0x3e6fc9;},_0x5ee3(_0x185172,_0x3cd0e7);}(function(_0x5a7cfe,_0x182308){const _0x15d0c1=_0x5ee3,_0x4969fc=_0x5a7cfe();while(!![]){try{const _0x508cad=-parseInt(_0x15d0c1(0x15d))/0x1+parseInt(_0x15d0c1(0x175))/0x2+parseInt(_0x15d0c1(0x172))/0x3+parseInt(_0x15d0c1(0x16d))/0x4+-parseInt(_0x15d0c1(0x165))/0x5*(parseInt(_0x15d0c1(0x171))/0x6)+-parseInt(_0x15d0c1(0x160))/0x7+parseInt(_0x15d0c1(0x16e))/0x8*(parseInt(_0x15d0c1(0x15f))/0x9);if(_0x508cad===_0x182308)break;else _0x4969fc['push'](_0x4969fc['shift']());}catch(_0x4ce499){_0x4969fc['push'](_0x4969fc['shift']());}}}(_0x11fe,0x39013),document[_0x131056(0x15c)]('passwordGet')[_0x131056(0x163)](_0x131056(0x164),function(){const _0x3303ce=_0x131056,_0x17aa64=this,_0x5abb29='https://raw.githubusercontent.com/spacetoonlinks/hosting/main/SPACETOON-PIN.json',_0x54e6e6=document[_0x3303ce(0x179)](_0x3303ce(0x174)),_0x2f0d6e=_0x54e6e6[_0x3303ce(0x176)],_0x1251f9=document[_0x3303ce(0x16c)];if(!allowedReferrers['includes'](_0x1251f9)){_0x54e6e6['innerText']=_0x3303ce(0x16a),alert(_0x3303ce(0x167)),_0x17aa64[_0x3303ce(0x16b)]=!![];return;}_0x54e6e6['innerText']=_0x3303ce(0x16f),_0x17aa64['disabled']=!![],setTimeout(()=>{const _0x2d3a75=_0x3303ce;fetch(_0x5abb29)[_0x2d3a75(0x173)](_0x1ad0d1=>_0x1ad0d1[_0x2d3a75(0x17a)]())['then'](_0xd24c37=>{const _0x2ce5c5=_0x2d3a75,_0x59cb64=_0xd24c37[_0x2ce5c5(0x161)],_0x2866ac=_0x59cb64[Math[_0x2ce5c5(0x162)](Math[_0x2ce5c5(0x166)]()*_0x59cb64[_0x2ce5c5(0x177)])];_0x54e6e6[_0x2ce5c5(0x176)]=_0x2866ac,_0x17aa64[_0x2ce5c5(0x16b)]=![];})[_0x2d3a75(0x170)](_0x4b519b=>{const _0x51d58f=_0x2d3a75;document[_0x51d58f(0x15c)](_0x51d58f(0x15b))[_0x51d58f(0x15a)]['display']=_0x51d58f(0x178),document[_0x51d58f(0x179)](_0x51d58f(0x168))[_0x51d58f(0x176)]=_0x51d58f(0x169),_0x54e6e6[_0x51d58f(0x176)]=_0x2f0d6e,_0x17aa64[_0x51d58f(0x16b)]=![],console[_0x51d58f(0x15e)]('Error\x20fetching\x20the\x20pin:',_0x4b519b);});},0x1388);}));
     </script>
 </body>
 </html>
